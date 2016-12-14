@@ -1,0 +1,30 @@
+group 'info.yannxia.java'
+version '0.1-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'jacoco'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    compile group: 'javax.validation', name: 'validation-api', version: '1.1.0.Final'
+
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.1'
+}
+
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+    }
+}
