@@ -5,3 +5,8 @@
 
 
 a simple param checker. extend [Bean Validation](http://beanvalidation.org/)
+
+content
+
+- Empty: check collection or array is empty
+- Enums: check a string is spcial enums
