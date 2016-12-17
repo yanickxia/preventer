@@ -28,12 +28,13 @@ public class EmptyConstraintValidatorTest {
         validationWrapper.assertNoViolations("emptyStringList");
     }
 
+    static class EmptyTest {
+        @Empty
+        private List<String> emptyStringList = Collections.emptyList();
+
+        @Empty
+        private List<String> notEmptyStringList = Collections.singletonList("123");
+    }
+
 }
 
-class EmptyTest {
-    @Empty
-    private List<String> emptyStringList = Collections.emptyList();
-
-    @Empty
-    private List<String> notEmptyStringList = Collections.singletonList("123");
-}
