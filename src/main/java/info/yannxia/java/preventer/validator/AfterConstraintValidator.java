@@ -31,7 +31,7 @@ public class AfterConstraintValidator implements ConstraintValidator<After, Obje
         }
 
         if (value instanceof Calendar) {
-            return ((Calendar) value).after(new Calendar.Builder().build());
+            return ((Calendar) value).after(new Calendar.Builder().setInstant(new Date()).build());
         }
 
         if (value instanceof LocalDateTime) {
