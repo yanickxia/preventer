@@ -10,3 +10,4 @@ content
 
 - Empty: check collection or array is empty
 - Enums: check a string is spcial enums
+- After: check time must after now
